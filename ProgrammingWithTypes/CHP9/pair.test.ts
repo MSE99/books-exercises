@@ -8,7 +8,7 @@ it('should export a constructor function.', t => {
     t.type(Pair, 'function')
 })
 
-it('should except any two types.', t => {
+it('should accept any two types.', t => {
     t.plan(2)
 
     const carName = 'Hyundai elenatra'
