@@ -1,0 +1,9 @@
+
+(define (sqrt-iter guess x)
+    (new-if (good-enough? guess x)
+        guess
+    (sqrt-iter (improve guess x) x)))
+
+;; If the interpreter is using applicative order evaluation
+;; an infinite loop will occur, because all three combinations
+;; will be evaluated before applying them to new-if
