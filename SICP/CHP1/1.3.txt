@@ -1,0 +1,14 @@
+(define (square x) (* x x))
+
+(define (sum-squares x y)
+  (+ (square x) (square y)))
+
+(define (>= x y) (or (> x y) (= x y)))
+
+(define (sos x y z) 
+  (cond ((and (>= x z) (>= y z)) (sum-squares x y))
+        ((and (>= z) (>= y x)) (sum-squares z y))
+        (else (sum-squares x z))))
+  
+        
+(sos 0 10 0)
