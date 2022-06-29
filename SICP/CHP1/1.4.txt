@@ -1,0 +1,7 @@
+
+(define (a-plus-abs-b a b)
+    (
+        (if (> b 0) + -) ;; If b is larger than 0 return the `+` procedure otherwise return `-` procedure 
+        a 
+        b
+    ))
