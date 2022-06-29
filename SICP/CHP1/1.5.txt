@@ -1,0 +1,15 @@
+
+(define (p) (p))
+
+(define (test x y)
+    (if (= x 0) 0 y))
+(test 0 (p))
+
+;; On an interpreter that uses applicative order evaluation
+;; the application will enter an infinite loop when trying
+;; to evaluate (p)
+
+;; On an interpreter that uses normal order evaluation
+;; the application will not enter an infinite loop
+;; due to the fact that the `test` procedure does not
+;; evaluate (p) if x was passed in as `0`.
