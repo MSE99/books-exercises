@@ -1,0 +1,7 @@
+
+(define (sum start end next term) 
+  (define (itr start end acc) 
+    (if (> start end)
+        acc
+        (itr (next start) end (+ acc (term start)))))
+  (itr start end 0))
