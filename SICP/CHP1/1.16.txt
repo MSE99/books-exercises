@@ -1,0 +1,9 @@
+
+(define (exp b x)
+  (define (itr b x p)
+    (cond ((= x 0) p)
+          ((even? x) (itr b (/ x 2) (* p p)))
+          (else (itr b (- x 1) (* b p)))))
+  (if (even? x)
+      (* b (itr b (- x 1) 1))
+      (itr b x 1)))
