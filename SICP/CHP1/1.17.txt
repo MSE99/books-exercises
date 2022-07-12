@@ -1,0 +1,10 @@
+
+(define (double x) (* x 2))
+(define (halve x) (/ x 2))
+
+(define (mul a b)
+  (cond ((or (= b 0) (= a 0)) 0)
+        ((= b 1) a)
+        ((= a 1) b)
+        ((odd? b) (+ a (mul a (- b 1))))
+        (else (double (mul a (halve b))))))
