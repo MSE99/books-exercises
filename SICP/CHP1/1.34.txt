@@ -1,0 +1,11 @@
+
+;; We can use text substitution to answer this question
+
+(define (f g) (g 2))
+(f f)
+(f 2)
+(2 2) ;; <-- Error
+
+;; f will attempt to pass 2 into it's argument so when evaluating (f f)
+;; the first call evaluates just fine but the second call throws an
+;; error due to 2 not being a compound procedure.
