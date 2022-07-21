@@ -1,0 +1,20 @@
+
+(define (make-rat n d)
+  (if (or (< n 0) (< d 0))
+      (cons (- (abs n)) (abs d))
+      (cons n d)))
+(define (num rat)
+  (car rat))
+(define (den rat)
+  (cdr rat))
+
+(define (print-rat x)
+  (display (num x))
+  (display "/")
+  (display (den x)))
+
+
+(define my-rat (make-rat 1 (- 2)))
+(print-rat my-rat)
+
+        
